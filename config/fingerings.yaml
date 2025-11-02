@@ -1,0 +1,29 @@
+mode: chord
+tuning: EADGBE  # 6→1
+items:
+  - name: C_major_open
+    expected:
+      - {finger: 1, string: 2, fret: 1}
+      - {finger: 2, string: 4, fret: 2}
+      - {finger: 3, string: 5, fret: 3}
+    mute: [6]
+  - name: G_major_open
+    expected:
+      - {finger: 2, string: 5, fret: 2}
+      - {finger: 3, string: 6, fret: 3}
+      - {finger: 4, string: 1, fret: 3}
+  - name: D_major_open
+    expected:
+      - {finger: 1, string: 3, fret: 2}
+      - {finger: 2, string: 1, fret: 2}
+      - {finger: 3, string: 2, fret: 3}
+  - name: A_major_open
+    expected:
+      - {finger: 1, string: 4, fret: 2}
+      - {finger: 2, string: 3, fret: 2}
+      - {finger: 3, string: 2, fret: 2}
+  - name: E_major_open
+    expected:
+      - {finger: 1, string: 3, fret: 1}
+      - {finger: 2, string: 5, fret: 2}
+      - {finger: 3, string: 4, fret: 2}

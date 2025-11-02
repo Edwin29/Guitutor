@@ -1,0 +1,60 @@
+app:
+  log_level: INFO
+  current_chord: C_major_open # 기본 코드
+
+video:
+  #req_width: 1280     
+  #req_height: 720
+  #req_fps: 30
+  draw_overlay: true
+  smoothing_window: 7
+
+board:
+  frets: 5
+  strings: 6
+  # 셀 충돌 판정 마진(정사영 좌표계, 0~1)
+  hit_margin: 0.06
+  
+hand:
+  tracker: mediapipe  # 'dummy' | 'mediapipe'
+  min_conf: 0.6
+
+overlay:
+  show_grid: true        # 기존 라인
+  show_cells: true       # 셀(칸) 반투명 표시
+  cell_alpha: 0.25       # 0.0~1.0 (불투명도)
+  cell_color: [50, 220, 50]   # RGB
+  cell_border_px: 1      # 테두리 얇게(옵션)
+  show_indices: true     # 프렛/줄 번호 표시(옵션)
+
+hotkeys:
+  toggle_cells: C    # 실행 중 셀 표시 토글(대문자 C)
+  next_chord: N     
+  prev_chord: P           
+
+board:
+  frets: 5
+  strings: 6
+  hit_margin: 0.06
+  calibration_path: config/calib.yaml
+
+
+ui:
+  enabled: true
+  auto_anchor: top_right   # top_left | top_right
+  base_y: 10               
+  spacing: 6
+  buttons:
+    - id: toggle_cells
+      label: "Cells"
+      w: 80
+      h: 32
+    - id: prev_chord
+      label: "<"
+      w: 32
+      h: 32
+    - id: next_chord
+      label: ">"
+      w: 32
+      h: 32
+

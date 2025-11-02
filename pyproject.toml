@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "guitutor"
+version = "0.1.0"
+description = "Guitar fingering tutor (vision-based) — 2-week MVP"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name="Your Name"}]
+license = {text = "MIT"}
+dependencies = ["numpy>=1.26", "PyYAML>=6.0", "opencv-python>=4.9"]
+
+[project.optional-dependencies]
+vision = ["mediapipe>=0.10"]  # 설치 선택
+
+[project.scripts]
+guitutor = "guitutor.cli:main"
+
+[tool.black]
+line-length = 100
+
+[tool.ruff]
+line-length = 100
+select = ["E","F","I","UP","B","SIM"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
